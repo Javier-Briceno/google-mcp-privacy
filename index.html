@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local Google MCP tools</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Local Google MCP tools</h1>
+  <p class="meta">Personal tools by Javier Briceño</p>
+
+  <p>
+    A small set of MCP servers that run on my own computer and let my AI
+    coding assistant (Claude Code) read my own Gmail and Google Calendar and
+    prepare drafts and events for me. They are built for one user, myself.
+    They are not a public service and nobody else can sign in to them.
+  </p>
+
+  <h2>What each tool does</h2>
+  <table>
+    <tr><th>Tool</th><th>Google access</th><th>What it does</th></tr>
+    <tr>
+      <td>Mail</td>
+      <td><code>gmail.readonly</code>, <code>gmail.compose</code></td>
+      <td>Searches and reads my mail. Creates and deletes drafts. Never sends mail.</td>
+    </tr>
+    <tr>
+      <td>Calendar</td>
+      <td><code>calendar.readonly</code>, <code>calendar.events</code></td>
+      <td>Lists my calendars and events. Creates, updates and deletes events.</td>
+    </tr>
+  </table>
+
+  <h2>How it works</h2>
+  <p>
+    Each tool is a local program. It signs in with Google OAuth through a
+    redirect to <code>127.0.0.1</code> on the same machine, keeps its token in
+    a local file, and talks directly to the Google APIs. There is no server of
+    mine in between and no database.
+  </p>
+
+  <p><a href="privacy.html">Privacy policy</a></p>
+
+  <footer>
+    Contact: <a href="mailto:javierbricenoticona@gmail.com">javierbricenoticona@gmail.com</a>
+  </footer>
+</main>
+</body>
+</html>
